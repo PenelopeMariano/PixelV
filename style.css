@@ -315,7 +315,7 @@ header img {
     font-size: 17px;
 }
 
-.campo{
+.campo {
     width: 60%;
     text-align: left;
 
@@ -327,7 +327,7 @@ header img {
 
 }
 
-.campo-descricao{
+.campo-descricao {
     width: 60%;
     text-align: left;
 
@@ -338,7 +338,7 @@ header img {
     margin-bottom: 30px;
 }
 
-.campo input{
+.campo input {
     height: 40px;
 
     color: var(--preto);
@@ -351,7 +351,7 @@ header img {
     outline: none;
 }
 
-.campo-descricao textarea{
+.campo-descricao textarea {
     color: var(--preto);
     background-color: var(--branco);
 
@@ -363,28 +363,28 @@ header img {
     resize: none;
 }
 
-.campo input, 
-.campo-descricao label{
+.campo input,
+.campo-descricao label {
     margin-bottom: 15px;
 }
 
 .campo input,
-.campo-descricao{
+.campo-descricao {
     font-family: "Recursive", sans-linear;
     font-size: 17px;
 }
 
 .campo input::placeholder,
-.campo-descricao textarea::placeholder{
+.campo-descricao textarea::placeholder {
     color: #a0a0a0;
 }
 
 .campo input:focus,
-.campo-descricao textarea:focus{
+.campo-descricao textarea:focus {
     outline: 2px solid var(--verde-pixelV);
 }
 
-#contato form button{
+#contato form button {
     height: 40px;
     width: 60%;
 
@@ -404,22 +404,22 @@ header img {
     transition: background-color 500ms;
 }
 
-#contato form button:hover{
+#contato form button:hover {
     background-color: var(--verde-pixelV);
 }
 
 
 /* ---------------Footer------------- */
-footer{
+footer {
     height: 250px;
     background-image: url(./img/footer.png);
 }
 
-footer img{
-height: 90px;
+footer img {
+    height: 90px;
 }
 
-footer .container-grid{
+footer .container-grid {
     height: 100%;
 
     display: flex;
@@ -427,7 +427,7 @@ footer .container-grid{
     align-items: center;
 }
 
-.redes-sociais{
+.redes-sociais {
     height: 50%;
 
     display: flex;
@@ -436,24 +436,170 @@ footer .container-grid{
     align-items: flex-end;
 }
 
-.redes-sociais p{
+.redes-sociais p {
     color: var(--branco);
 
     font-family: "Recursive", sans-linear;
     font-size: 24px;
 }
 
-.icones-redes{
+.icones-redes {
     width: 240px;
 
     display: flex;
     justify-content: space-between;
 }
 
-.icones-redes a{
-color: var(--branco);
+.icones-redes a {
+    color: var(--branco);
 }
 
-.icones-redes a:hover{
+.icones-redes a:hover {
     color: var(--verde-pixelV);
+}
+
+/* -------------Menu hamburguer----------- */
+.menu-fechado {
+    display: none;
+}
+
+#icone-barras,
+#icone-x {
+    display: none;
+}
+
+
+
+
+/* ----------------responsividade------------- */
+
+@media screen and (max-width: 1024px) {
+
+    .titulo,
+    .titulo h2 {
+        font-size: 22px;
+        font-family: "Recursive", sans-linear;
+    }
+
+    .titulo span {
+        line-height: 45pxs;
+    }
+
+    .menu {
+        justify-content: space-evenly;
+    }
+
+    #sobre p {
+        font-size: 16px;
+    }
+
+    #servicos .card svg {
+        height: 55px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        position: relative;
+    }
+
+    header button {
+        width: 50px;
+
+        background: none;
+        border: none;
+
+        cursor: pointer;
+        display: unset;
+    }
+
+    header svg {
+        fill: var(--branco);
+    }
+
+    nav.menu {
+        height: 500px;
+        width: 350px;
+
+        padding: 0px 30px;
+
+        background-color: var(--preto);
+
+        flex-direction: column;
+        justify-content: space-around;
+
+        position: absolute;
+        top: 165px;
+        right: 0px;
+
+        z-index: 1;
+    }
+
+
+    .conteudo-banner img {
+        display: none;
+    }
+
+    .conteudo-banner {
+        text-align: center;
+    }
+
+    #Sobre img{
+        display: none;
+    }
+
+    .titulo {
+        justify-content: center;
+    }
+
+    #cases img{
+        height: 200px;
+    }
+
+    footer .roda-pe {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer img {
+        height: 80px;
+    }
+
+    .redes-sociais {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .redes-sociais svg {
+        height: 35px;
+    }
+}
+
+
+@media screen and (max-width: 320px){
+    nav.menu {
+        width: 260px;
+    }
+
+    header img {
+     width: 185;
+
+    }
+
+    .conteudo-banner p{
+        font-size: 24px;
+        width: 310px;
+    }
+
+    .conteudo-banner ul{
+        font-family: 25px;
+    }
+
+    .titulo,
+    .titulo h2{
+        font-size: 20px;
+    }
 }
